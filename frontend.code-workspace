@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"todo-tree.general.tags": [
+			"BUG",
+			"FIXME",
+			"TODO",
+			"NOTE"
+		  ],
+		  "todo-tree.highlights.customHighlight": {
+			  "BUG": {
+				  "icon": "bug",
+				  "iconColour": "darkred",
+				  "type": "text",
+				  "background": "darkred",
+				  "foreground": "black"
+			  },
+			  "FIXME": {
+				  "icon": "tools",
+				  "iconColour": "gold",
+				  "type": "text",
+				  "background": "gold",
+				  "foreground": "black"
+			  },
+			  "TODO": {
+				  "icon": "checklist",
+				  "iconColour": "forestgreen",
+				  "type": "text",
+				  "background": "forestgreen",
+				  "foreground": "black",
+			  },
+			  "NOTE": {
+				  "icon": "note",
+				  "iconColour": "palegoldenrod",
+				  "type": "text",
+				  "background": "palegoldenrod",
+				  
+			  }
+		  },
+		  "editor.suggestSelection": "first",
+		  "editor.tabSize": 2,
+		  "explorer.confirmDelete": false,
+		  "explorer.confirmDragAndDrop": false,
+		  "explorer.incrementalNaming": "smart",
+		  "printcode.fontSize": 8,
+		  "javascript.format.enable": false,
+		  "javascript.validate.enable": false,
+	}
+}
