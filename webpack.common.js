@@ -1,21 +1,15 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 
 // TODO take hostname after 2nd boot and generate frontend/dist
-const hostname = 'dietpi.local'
+const hostname = 'localhost'
 
 module.exports = {
   entry: {
     index: path.resolve(__dirname, './js/index.js')
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true
   },
   plugins: [
     new webpack.ProgressPlugin(),
@@ -25,7 +19,6 @@ module.exports = {
       chunks: ['index'],
       filename: 'index.html'
     }),
-    new MiniCssExtractPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -50,10 +43,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
@@ -69,6 +58,11 @@ module.exports = {
   },
   externals: {
     bootstrap: 'bootstrap.native',
-    hammerjs: 'hammerjs'
+    hammerjs: 'hammerJs'
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
   }
 }

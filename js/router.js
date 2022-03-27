@@ -2,6 +2,7 @@
 
 import '../css/router.css'
 
+// NOTE Here must insert pages Nav Link
 import Dashboard from './views/Dashboard.js'
 import Posts from './views/Posts.js'
 import PostView from './views/PostView.js'
@@ -24,6 +25,7 @@ const navigateTo = url => {
 }
 
 const router = async () => {
+  // NOTE Here must insert pages Nav Link
   const routes = [
     { path: '/', view: Dashboard },
     { path: '/posts', view: Posts },
