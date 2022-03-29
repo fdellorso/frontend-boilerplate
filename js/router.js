@@ -4,6 +4,7 @@ import '../css/router.css'
 
 // NOTE Here must insert pages Nav Link
 import Dashboard from './views/Dashboard.js'
+import Camera from './views/Camera'
 import Posts from './views/Posts.js'
 import PostView from './views/PostView.js'
 import Settings from './views/Settings.js'
@@ -28,6 +29,7 @@ const router = async () => {
   // NOTE Here must insert pages Nav Link
   const routes = [
     { path: '/', view: Dashboard },
+    { path: '/camera', view: Camera },
     { path: '/posts', view: Posts },
     { path: '/posts/:id', view: PostView },
     { path: '/settings', view: Settings }
@@ -53,6 +55,9 @@ const router = async () => {
   const view = new match.route.view(getParams(match))
 
   document.querySelector('#app').innerHTML = await view.getHtml()
+
+  const pageAction = await view.getAction()
+  await pageAction()
 }
 
 window.addEventListener('popstate', router)

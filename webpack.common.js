@@ -56,10 +56,6 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    bootstrap: 'bootstrap.native',
-    hammerjs: 'hammerJs'
-  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),

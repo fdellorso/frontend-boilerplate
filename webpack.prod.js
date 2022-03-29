@@ -44,6 +44,9 @@ module.exports = merge(common, {
       new CssMinimizerPlugin()
     ]
     // usedExports: true
+  },
+  externals: {
+    'bootstrap.native/dist/bootstrap-native-v4': 'bootstrap.native',
+    hammerjs: 'hammerjs'
   }
-
 })

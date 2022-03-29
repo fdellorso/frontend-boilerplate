@@ -10,4 +10,12 @@ export default class {
   async getHtml () {
     return ''
   }
+
+  async getAction () {
+    async function action () {
+      console.log('action')
+    }
+
+    return action
+  }
 }

@@ -4,13 +4,19 @@ const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     // static: './dist'
     contentBase: path.join(__dirname, 'dist'),
     hot: false,
     // compress: true,
-    port: 9000
+    // host: '0.0.0.0',
+    // http2: true,
+    // useLocalIp: true,
+    port: 9000,
+    historyApiFallback: {
+      index: 'index.html'
+    }
   },
   module: {
     rules: [
