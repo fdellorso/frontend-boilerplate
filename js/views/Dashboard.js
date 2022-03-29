@@ -17,12 +17,4 @@ export default class extends AbstractView {
             </p>
         `
   }
-
-  async getAction () {
-    async function action () {
-      console.log('action')
-    }
-
-    return action
-  }
 }
