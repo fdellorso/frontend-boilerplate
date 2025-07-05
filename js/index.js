@@ -1,5 +1,7 @@
 'use strict'
 
+import '@fortawesome/fontawesome-free'
+
 import '../css/index.css'
 
 import './pwa.js'

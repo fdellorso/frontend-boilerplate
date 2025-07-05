@@ -32,7 +32,6 @@ module.exports = merge(common, {
     ]
   },
   optimization: {
-    minimize: true,
     runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
